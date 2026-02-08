@@ -25,7 +25,11 @@ const config = {
 };
 
 // Validate required environment variables
-const requiredEnvVars = ['SUPABASE_URL', 'SUPABASE_ANON_KEY'];
+const requiredEnvVars = [
+  'SUPABASE_URL', 
+  'SUPABASE_ANON_KEY',
+  'SUPABASE_SERVICE_ROLE_KEY', // Add this
+];
 
 requiredEnvVars.forEach((envVar) => {
   if (!process.env[envVar]) {
